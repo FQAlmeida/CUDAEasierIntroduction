@@ -1,0 +1,2 @@
+Name,Invocations,Avg. Duration(ns),Registers/Thread,Static Shared Memory,Avg. Dynamic Shared Memory
+"add(int, float*, float*)",1,1501635,8,0,0

@@ -1,0 +1,8 @@
+*.exe
+*.lib
+*.exp
+settings.json
+main_v*_prof
+.metadata
+.vscode
+RemoteSystemsTempFiles
