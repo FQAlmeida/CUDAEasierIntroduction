@@ -1,5 +1,7 @@
 # An Even Easier Introduction to CUDA
 
+[An Even Easier Introduction to CUDA tutorial](https://devblogs.nvidia.com/even-easier-introduction-cuda/)
+
 ## Nvidia GeForece GTX 750 Ti
 
 |  | Name | Invocations | Avg. Duration(ns) | Avg. Duration(ms) | Registers/Thread | Static Shared Memory | Avg. Dynamic Shared Memory |
