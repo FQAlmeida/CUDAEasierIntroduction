@@ -4,6 +4,11 @@
 __global__ void add(int n, float *x, float *y) {
     int index = blockIdx.x * blockDim.x +  threadIdx.x;
     int stride = blockDim.x * gridDim.x;
+    //printf("threadIdx.x: %d blockIdx.x: %d\n", threadIdx.x, blockIdx.x);
+    //printf("threadIdx.y: %d threadIdx.z: %d\n", threadIdx.y, threadIdx.z);
+    //printf("blockIdx.y: %d blockIdx.z: %d\n", blockIdx.y, blockIdx.z);
+    //printf("blockDim.y: %d blockDim.z: %d\n", blockDim.y, blockDim.z);
+    //printf("gridDim.y: %d gridDim.z: %d\n", gridDim.y, gridDim.z);
     for (int i = index; i < n; i+=stride)
         y[i] = x[i] + y[i];
 }
@@ -28,8 +33,9 @@ int main(void) {
     cudaDeviceSynchronize();
 
     float max_error = 0.0f;
-    for (int i = 0; i < n; i++)
+    for (int i = 0; i < n; i++){
         max_error = fmax(max_error, fabs(y[i] - 3.0f));
+    }
     std::cout << "Max error: " << max_error << std::endl;
 
     cudaFree(x);
